@@ -14,17 +14,17 @@ Film adalah salah satu media komunikasi modern efektif yang berbentuk audio visu
 ### Problem Statements
 
 - Bagaimana membuat sistem rekomendasi yang relevan dengan minat pengguna dengan teknik content-based filtering berdasarkan dataset Movie Recommendation System?
-- Bagaimana sistem rekomendasi dapat mengukur tingkat relevansi rekomendasi terhadap pengguna berdasarkan metrik evaluasi presisi sistem rekomendasi? 
+- Bagaimana sistem rekomendasi dapat mengukur tingkat relevansi rekomendasi film terhadap pengguna berdasarkan metrik evaluasi presisi sistem rekomendasi? 
 
 ### Goals
 
 - Menghasilkan sejumlah rekomendasi film berdasarkan judul dan katergori film terhadap minat pengguna dengan menggunakan teknik content-based filtering.
-- Mengevaluasi performa sistem rekomendasi menggunakan metrik evaluasi presisi sistem rekomendasi. 
+- Mengevaluasi performa sistem rekomendasi film menggunakan metrik evaluasi presisi sistem rekomendasi. 
 
 ### Solution Statements 
 
-- Membangun model sistem rekomendasi berbasis konten dengan mengekstrak fitur-fitur dari file dataset film, kemudian mengubah fitur tertentu menjadi representasi vektor dengan menggunakan TF-IDF serta menghitung tingkat kemiripan fitur tertentu dengan menggunakan cosine similarity.
-- Melakukan evaluasi kerja sistem rekomendasi dengan menggunakan metrik presisi untuk mengetahui seberapa relevan dan akurat rekomendasi yang dihasilkan terhadap minat pengguna. 
+- Membangun model sistem rekomendasi film berbasis konten dengan mengekstrak fitur-fitur dari file dataset, kemudian mengubah fitur tertentu menjadi representasi vektor dengan menggunakan TF-IDF serta menghitung tingkat kemiripan fitur tertentu dengan menggunakan cosine similarity.
+- Melakukan evaluasi kerja sistem rekomendasi film dengan menggunakan metrik presisi untuk mengetahui seberapa relevan dan akurat rekomendasi yang dihasilkan terhadap minat pengguna. 
 
 
 ## Data Understanding
