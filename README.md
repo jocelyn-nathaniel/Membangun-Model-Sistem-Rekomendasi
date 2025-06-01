@@ -31,11 +31,11 @@ Film adalah salah satu media komunikasi modern efektif yang berbentuk audio visu
 
 Pada proyek membangun model sistem rekomendasi ini akan menggunakan Movie Recommendation System Dataset yang memiliki 2 file dataset terpisah yang masing-masing berisi informasi tentang film dan rating. Dataset ini dimiliki oleh Manas Parashar yang tersedia secara publik untuk keperluan riset dan edukasi bagi siapa pun terutama untuk membuat sistem rekomendasi. Dataset movies memiliki 62423 entri dengan 3 kolom varibel berupa 'movieId', 'title', dan 'genres' yang menunjukkan lebih dari 62 ribu jenis film dalam bentuk judul dan kategori sedangkan dataset ratings memiliki 25000095 entri dengan 4 kolom variabel berupa 'userId', 'movieId', 'rating', dan 'timestamp' yang menunjukkan lebih dari 25 juta pengguna dalam bentuk ulasan. 
 
-Informasi Dataset Movies: 
+Dataset Movies: 
 
 ![image](https://github.com/user-attachments/assets/bc697409-aa9d-4432-ab47-0f96b267e1b2)
 
-Informasi Dataset Ratings: 
+Dataset Ratings: 
 
 ![image](https://github.com/user-attachments/assets/a02ab199-281f-4eaa-a995-cae44e12809f)
 
@@ -69,15 +69,23 @@ Duplikasi Data pada Dataset Ratings:
 
 - Berdasarkan hasil pada pemeriksaan missing value dan jumlah entri informasi dataset, tidak terdapat missing value sehingga tidak perlu melakukan penanganan missing value. Hal tersebut menunjukkan bahwa setiap entri data telah terisi dengan baik.
 
+Informasi Dataset Movies: 
+
 ![image](https://github.com/user-attachments/assets/e38bb206-f966-4054-8f06-684e165de966)
+
+Informasi Dataset Ratings: 
 
 ![image](https://github.com/user-attachments/assets/fa1c8a85-72ab-4787-afab-5a5c382c24bc)
 
+Missing Values Dataset Movies: 
+
 ![image](https://github.com/user-attachments/assets/ff42c357-c636-4a4d-9a80-9ad3ae20d3e5)
+
+Missing Values Dataset Ratings: 
 
 ![image](https://github.com/user-attachments/assets/f522d2d0-3a6b-4846-8d86-d832f6dcaae1)
 
-- Berdasarkan hasil pada deskripsi statistik dataset, didapatkan bahwa nilai minimum rating sebesar 0.5 sedangkan nilai maksimum rating sebesar 5.0 dengan nilai rata-rata sebesar 3.53 atau kalau dibulatkan ke atas menjadi 3.6 yang berarti pengguna cenderung memberikan ulasan yang cukup tinggi.
+- Berdasarkan hasil pada deskripsi statistik dataset ratings, didapatkan bahwa nilai minimum rating sebesar 0.5 sedangkan nilai maksimum rating sebesar 5.0 dengan nilai rata-rata sebesar 3.53 atau kalau dibulatkan ke atas menjadi 3.6 yang berarti pengguna cenderung memberikan ulasan yang cukup tinggi.
 
 ![image](https://github.com/user-attachments/assets/4724ca51-d898-46c6-bf45-eef4006a2024)
 
@@ -179,11 +187,7 @@ Berdasarkan hasil TF-IDF di atas, didapatkan bahwa kategori film telah berhasil 
 
 Pada proyek ini, teknik yang akan digunakan untuk menghasilkan rekomendasi film sesuai dengan minat pengguna adalah content-based filtering. Ide dari content-based filtering atau sistem rekomendasi berbasis konten adalah merekomendasikan item yang mirip dengan yang disukai pengguna di masa lalu seperti sistem merekomendasikan film dengan kategori dan judul film. Content-based filtering mempelajari profil minat pada pengguna baru berdasarkan data dari objek yang telah dinilai oleh pengguna. Teknik ini bekerja dengan memberikan saran beberapa item serupa yang pernah disukai pengguna sebelumnya di masa lalu atau yang sedang dilihat di masa ini. Pada bagian ini, akan dibuatkan model sistem rekomendasi berdasarkan kategori film dan berdasarkan judul film. 
 
-Model Sistem Rekomendasi Berdasarkan Kategori Film: 
-
 ![image](https://github.com/user-attachments/assets/6b3a76d6-01bd-4b30-9983-27c858b8d94b)
-
-Model Sistem Rekomendasi Berdasarkan Judul Film: 
 
 ![image](https://github.com/user-attachments/assets/ad60d556-aba3-454d-a1e5-13bd77d16900)
 
@@ -211,7 +215,7 @@ Evaluasi Model Sistem Rekomendasi Berdasarkan Judul Film:
 
 ![image](https://github.com/user-attachments/assets/69aaa6ab-681a-49a3-a760-baad10a95b39)
 
-Berdasarkan hasil top-N recommendation di atas, didapatkan bahwa teknik content-based filtering berhasil rekomendasikan berdasarkan kategori dan judul film. 
+Berdasarkan hasil top-N recommendation di atas, didapatkan bahwa teknik content-based filtering berhasil merekomendasikan berdasarkan kategori dan judul film. 
 
 
 ## Evaluation
@@ -222,13 +226,9 @@ Metrik evaluasi yang digunakan pada tahapan ini adalah presisi sistem rekomendas
 
 Presisi tidak dapat dihitung dengan memanggil library pada klasifikasi karena tidak memiliki data target atau label seperti pada supervised learning. Sehingga akan dilakukan perhitungan presisi dengan melihat pada kategori item yang direkomendasikan berupa apakah kategori yang direkomendasikan relevan atau mirip dengan kategori yang dipilih. 
 
-Evaluasi Model Sistem Rekomendasi Berdasarkan Kategori Film: 
-
 ![image](https://github.com/user-attachments/assets/f5649a99-c4bb-41a5-bcc2-49be5c09d21a)
 
 ![image](https://github.com/user-attachments/assets/c863ce79-3dd9-4c3a-b8ce-bf9b8cd219f8)
-
-Evaluasi Model Sistem Rekomendasi Berdasarkan Judul Film: 
 
 ![image](https://github.com/user-attachments/assets/09ead541-9630-47aa-9808-0104ccb80e26)
 
@@ -242,4 +242,4 @@ Berdasarkan hasil evaluasi rekomendasi berdasarkan judul film di atas, dari 10 i
 
 P = #of recommendation that are relevant/#of item we recommend = 10/10 = 1 atau 100%. 
 
-Hal tersebut menunjukkan bahwa teknik yang dilakukan pada model telah bekerja dengan efektif dalam mengenali kemiripan kategori dan judul film sehingga dapat memberikan rekomendasi sesuai dengan minat pengguna. 
+Hal tersebut menunjukkan bahwa teknik yang dilakukan telah bekerja dengan efektif dalam mengenali kemiripan kategori dan judul film sehingga dapat memberikan rekomendasi sesuai dengan minat pengguna. 
