@@ -29,7 +29,7 @@ Film adalah salah satu media komunikasi modern efektif yang berbentuk audio visu
 
 ## Data Understanding
 
-Pada proyek membangun model sistem rekomendasi ini akan menggunakan Movie Recommendation System Dataset yang memiliki 2 file dataset terpisah yang masing-masing berisi informasi tentang film dan rating. Dataset ini dimiliki oleh Manas Parashar yang tersedia secara publik untuk keperluan riset dan edukasi bagi siapa pun terutama untuk membuat sistem rekomendasi. Dataset movies memiliki 62423 entri dengan 3 kolom varibel berupa 'movieId', 'title', dan 'genres' yang menunjukkan lebih dari 62 ribu jenis film dalam bentuk judul dan kategori sedangkan dataset ratings memiliki 25000095 entri dengan 4 kolom variabel berupa 'userId', 'movieId', 'rating', dan 'timestamp' yang menunjukkan lebih dari 25 juta pengguna dalam bentuk ulasan. 
+Pada proyek membangun model sistem rekomendasi ini akan menggunakan Movie Recommendation System Dataset yang memiliki 2 file dataset terpisah yang masing-masing berisi informasi tentang film dan rating. Dataset ini dimiliki oleh Manas Parashar yang tersedia secara publik untuk keperluan riset dan edukasi bagi siapa pun terutama untuk membuat sistem rekomendasi. Dataset movies memiliki 62423 entri dengan 3 kolom variabel berupa 'movieId', 'title', dan 'genres' yang menunjukkan lebih dari 62 ribu jenis film dalam bentuk judul dan kategori sedangkan dataset ratings memiliki 25000095 entri dengan 4 kolom variabel berupa 'userId', 'movieId', 'rating', dan 'timestamp' yang menunjukkan lebih dari 25 juta pengguna dalam bentuk ulasan. 
 
 Dataset Movies: 
 
@@ -215,7 +215,7 @@ Evaluasi Model Sistem Rekomendasi Berdasarkan Judul Film:
 
 ![image](https://github.com/user-attachments/assets/69aaa6ab-681a-49a3-a760-baad10a95b39)
 
-Berdasarkan hasil top-N recommendation di atas, didapatkan bahwa teknik content-based filtering berhasil merekomendasikan berdasarkan kategori dan judul film. 
+Berdasarkan hasil top-N recommendation di atas, didapatkan bahwa teknik content-based filtering berhasil membuat model rekomendasi film berdasarkan kategori dan judul film. 
 
 
 ## Evaluation
@@ -224,7 +224,7 @@ Metrik evaluasi yang digunakan pada tahapan ini adalah presisi sistem rekomendas
 
 ![image](https://github.com/user-attachments/assets/e9f6322a-97a8-4602-8068-ce6c4d863355)
 
-Presisi tidak dapat dihitung dengan memanggil library pada klasifikasi karena tidak memiliki data target atau label seperti pada supervised learning. Sehingga akan dilakukan perhitungan presisi dengan melihat pada kategori item yang direkomendasikan berupa apakah kategori yang direkomendasikan relevan atau mirip dengan kategori yang dipilih. 
+Presisi tidak dapat dihitung dengan memanggil library pada klasifikasi karena tidak memiliki data target atau label seperti pada supervised learning. Sehingga akan dilakukan perhitungan presisi dengan melihat pada kategori item yang direkomendasikan berupa kategori yang direkomendasikan relevan/mirip dengan kategori yang dipilih atau tidak. 
 
 ![image](https://github.com/user-attachments/assets/f5649a99-c4bb-41a5-bcc2-49be5c09d21a)
 
@@ -234,7 +234,7 @@ Presisi tidak dapat dihitung dengan memanggil library pada klasifikasi karena ti
 
 ![image](https://github.com/user-attachments/assets/2526067f-50b4-4296-b2cb-000e9cad4c98)
 
-Berdasarkan hasil evaluasi rekomendasi berdasarkan kategori film di atas, dari 10 item yang direkomendasikan, seluruh item memiliki kategori Thriller sengan seluruh genre film berupa Horror dan Thriller. Artinya, presisi pada sistem sebesar 10/10 atau 100% di mana sesuai dengan formula yang tertera sebagai berikut: 
+Berdasarkan hasil evaluasi rekomendasi berdasarkan kategori film di atas, dari 10 item yang direkomendasikan, seluruh item memiliki kategori Thriller dengan seluruh genre film berupa Horror dan Thriller. Artinya, presisi pada sistem sebesar 10/10 atau 100% di mana sesuai dengan formula yang tertera sebagai berikut: 
 
 P = #of recommendation that are relevant/#of item we recommend = 10/10 = 1 atau 100%. 
 
@@ -242,4 +242,4 @@ Berdasarkan hasil evaluasi rekomendasi berdasarkan judul film di atas, dari 10 i
 
 P = #of recommendation that are relevant/#of item we recommend = 10/10 = 1 atau 100%. 
 
-Hal tersebut menunjukkan bahwa teknik yang dilakukan telah bekerja dengan efektif dalam mengenali kemiripan kategori dan judul film sehingga dapat memberikan rekomendasi sesuai dengan minat pengguna. 
+Hal tersebut menunjukkan bahwa teknik yang dilakukan telah bekerja dengan efektif dalam mengenali kemiripan kategori dan judul film sehingga dapat memberikan rekomendasi film yang sesuai dengan minat pengguna. 
